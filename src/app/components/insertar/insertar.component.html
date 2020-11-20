@@ -1,0 +1,18 @@
+<p>insertar works!</p>
+<h1>Inserta un nuevo departamento !</h1>
+<div>
+    <form #insertarFom="ngForm">
+        <label>Numero: </label>
+        <input type="number" #cajanumero name="cajanumero"
+        class="form-control"/><br/>
+        <label>Nombre: </label>
+        <input type="text" #cajanombre name="cajanombre"
+        class="form-control"/><br/>
+        <label>Año: </label>
+        <input type="number" #cajaAnyo name="cajaAnyo"
+        class="form-control"/>
+        <button (click)="insertarDepartamento()" class="btn btn-success">
+            Insertar
+        </button>
+    </form>
+</div>

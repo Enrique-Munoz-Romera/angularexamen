@@ -1,0 +1,24 @@
+<p>update works!</p>
+<h1 style="color:blue">Update Departamento</h1>
+<div *ngIf="serie != null">
+    <form #updateForm="ngForm">
+        <label>Numero: </label>
+        <input type="number" #cajanumero name="cajanumero"
+        value="{{serie.numero}}" readonly>
+        <label>Nombre: </label>
+        <input type="text" #cajanombre name="cajanombre"
+        value="{{serie.nombre}}" >
+        <label>Año: </label>
+        <input type="number" #cajaAnyo name="cajaAnyo"
+        value="{{serie.anyo}}" >
+        <label>Puntuacion: </label>
+        <input type="number" #cajaAnyo name="cajaAnyo"
+        value="{{serie.anyo}}" >
+        <label>Imagen: </label>
+        <input type="text" #cajaImagen name="cajaImagen"
+        value="{{serie.imagen}}" >
+        <button (click)="updateDepartamento()" class="btn btn-warning">
+            Modificar         
+        </button>
+    </form>
+</div>

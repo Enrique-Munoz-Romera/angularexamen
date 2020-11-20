@@ -1,0 +1,37 @@
+<p>series works!</p>
+
+<div *ngIf="series.length > 0">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Puntuacion</th>
+                <th>Año</th>
+                <th>Imagen</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let serie of series">
+                <td>{{serie.idSerie}}</td>
+                <td>{{serie.nombre}}</td>
+                <td>{{serie.puntuacion}}</td>
+                <td>{{serie.anyo}}</td>
+                <td><img src={{serie.imagen}}/></td>
+                <td>
+                    <a [routerLink]="['/update',serie.idSerie]" class="btn btn-warning">
+                        Update
+                    </a>
+                </td>
+                <td>
+                    <a [routerLink]="['/eliminar',serie.idSerie]" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
